@@ -48,7 +48,7 @@ export async function deserializeGraph(): Promise<Graph> {
  * */
 async function lastBackupTime(): Promise<moment.Moment> {
     const backupfiles = await fs.readdir("./backup/").catch(() => []); // if no backups, give empty array which will fall back to unix epoch in next line
-    const latestBackupFile = backupfiles.sort().reverse()[0] ?? "1970-06-07T00:00:00";
+    const latestBackupFile = backupfiles.sort().reverse()[0] ?? "1970-01-01T00:00:00";
     const timestamp = latestBackupFile.replace(/\.json$/i, "");
     return moment(timestamp);
 }

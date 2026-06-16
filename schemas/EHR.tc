@@ -4,10 +4,10 @@ relation owner
 relation editor
 relation viewer
 
-give editor if owner
 give viewer if editor
+give viewer if owner
 
-permission can_redact = owner
-permission can_edit = editor
-permission can_append = editor
-permission can_view = viewer
+permission redact = owner
+permission edit = editor
+permission append = editor
+permission view = viewer

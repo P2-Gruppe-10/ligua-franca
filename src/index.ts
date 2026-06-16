@@ -25,7 +25,7 @@ setInterval(() => {
     serializeGraph(graph).catch((err: unknown) => {
         console.warn("Failed to serialize graph:", err);
     });
-}, 10000);
+}, 5000);
 
 const AuthorizeQuerySchema = z.object({
     objectId: z.string().min(1), // .min(1) ensures no empty strings. without it, /authorize?objectId=&... would be valid input

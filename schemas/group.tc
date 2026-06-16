@@ -2,15 +2,10 @@ type group
 
 relation parent
 relation member
-relation admin
 relation manager
-relation auxiliary
 
 give member if parent has member
-give admin if parent has admin
 give manager if parent has manager
-give manager if admin
 
-permission can_fire = manager + admin
-permission can_edit = admin + parent:auxiliary
-permission onlyauxiliaryonthis = auxiliary
+permission view_members = member + manager
+permission modify_members = manager

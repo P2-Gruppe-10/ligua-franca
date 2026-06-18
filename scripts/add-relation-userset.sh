@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 if [[ "$1" == "--help" ]]; then
-    echo "usage: add-relation-userset.sh <userset-object-type> <userset-object-id> <userset-relation> <relation-name> <object-type> <object-id>"
+    echo "usage: add-relation-userset.sh <userset-relation> <userset-object-type> <userset-object-id> <relation-name> <object-type> <object-id>"
     exit
 fi
 
-readonly userset_obj_type="$1"
-readonly userset_obj_id="$2"
-readonly userset_relation="$3"
+readonly userset_relation="$1"
+readonly userset_obj_type="$2"
+readonly userset_obj_id="$3"
 readonly relation="$4"
 readonly object_type="$5"
 readonly object_id="$6"

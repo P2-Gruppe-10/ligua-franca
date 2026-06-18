@@ -40,7 +40,7 @@ scripts/add-object.sh group overlæge;
 7. Vi kan lave en relation som siger at alle medlemmer af `doctor` er editor af `Bob-blodprøve`:
 
 ```sh
-scripts/add-relation-userset.sh group læge member editor EHR Bob-blodprøve;
+scripts/add-relation-userset.sh member group læge editor EHR Bob-blodprøve;
 ```
 
 8. Vi kan nu lave en doctor, og gøre dem medlem af denne gruppe:
@@ -64,7 +64,7 @@ scripts/query-permission.sh $MARTIN EHR Bob-blodprøve edit;
 ALICE=3;
 scripts/add-subject.sh $ALICE; #Opræt alice bruge
 scripts/add-relation.sh $ALICE member group overlæge; # Gør alice en overlæge
-scripts/add-relation-userset.sh group overlæge ... parent group læge # Lav object to object "parent" relation
+scripts/add-relation-userset.sh ... group overlæge parent group læge # Lav object to object "parent" relation
 ```
 
 11. Vi kan kigge på schemas/group.tc typeconfig og se hvad det gør:
